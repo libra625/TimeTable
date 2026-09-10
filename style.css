@@ -1,0 +1,369 @@
+h2 {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.lesson-teacher-name {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    border-radius: 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 30px;
+    margin: 0 auto;
+    gap: 5px;
+    display: grid;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 1em;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.monday {
+    grid-area: md;
+}
+
+.tuesday {
+    grid-area: ts;
+}
+
+.wednesday {
+    grid-area: wd;
+}
+
+.thursday {
+    grid-area: th;
+}
+
+.friday {
+    grid-area: fr;
+}
+
+.wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:
+        "md md ts ts wd wd"
+        ". th th fr fr .";
+}
+
+.lesson-type-practice {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(0, 34, 255);
+    color: #fff;
+}
+
+.lesson-type-lecture {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.lesson-type-lab {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.current-week-display {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-button-href {
+    background: #1e90ff;
+}
+
+.lesson-href {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.lesson-button-href:hover,
+.lesson-button-href:focus,
+.lesson-button-href:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    background: #23c211;
+}
+
+.toggle-week-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+    display: block;
+}
+
+.toggle-week-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.monday, .tuesday, .wednesday, .thursday, .friday {
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+.even-week, .odd-week, .common-week {
+    background-color: azure;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.additional-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.current-week-display {
+    margin: 0;
+}
+
+
+.odd-week {
+    display: none;
+}
+
+body.odd-week-active .even-week {
+    display: none;
+}
+
+body.odd-week-active .odd-week {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "md ts"
+            "wd th"
+            "fr fr";
+    }
+
+    .additional-info {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: #f2f4f7;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .additional-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .toggle-week-btn {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 17px;
+    }
+
+    .current-week-display {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 17px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .wrapper > * {
+        width: 100%;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .title {
+        font-size: 23px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Individual day */
+    .monday,
+    .tuesday,
+    .wednesday,
+    .thursday,
+    .friday {
+        width: 100%;
+        background-color: aqua;
+    }
+
+    /* Lesson cards */
+    .even-week,
+    .odd-week,
+    .common-week {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: azure;
+    }
+
+    h2 {
+        font-size: 18px;
+        padding: 4px 0;
+        margin-top: 3px;
+    }
+
+    .lesson-name {
+        font-size: 20px;
+    }
+
+    .lesson-time {
+        font-size: 17px;
+    }
+
+    .lesson-teacher-name {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .lesson-type-practice,
+    .lesson-type-lecture,
+    .lesson-type-lab {
+        font-size: 16px;
+        padding: 6px;
+        margin: 5px 0;
+    }
+
+    /* Join button */
+    .lesson-button-href {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .lesson-href {
+        width: 100%;
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    /* Disable the large hover animation on touch devices */
+    .lesson-button-href:hover,
+    .lesson-button-href:focus,
+    .lesson-button-href:active {
+        transform: none;
+    }
+
+    .toggle-week-btn:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .wrapper {
+        padding: 7px;
+        gap: 10px;
+    }
+
+    .wrapper > * {
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .lesson-name {
+        font-size: 18px;
+    }
+
+    .lesson-time {
+        font-size: 16px;
+    }
+
+    .lesson-teacher-name {
+        font-size: 15px;
+    }
+
+    .lesson-href {
+        font-size: 16px;
+        padding: 9px;
+    }
+}
