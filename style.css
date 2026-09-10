@@ -161,6 +161,7 @@ h2 {
 
 .even-week, .odd-week, .common-week {
     background-color: azure;
+    max-width: 90%;
     padding: 15px;
     margin-bottom: 10px;
 }
@@ -193,7 +194,7 @@ body.odd-week-active .odd-week {
 
 @media (max-width: 900px) {
     .wrapper {
-        padding: 20px;
+        padding: 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "md ts"
@@ -253,7 +254,7 @@ body.odd-week-active .odd-week {
 
     .wrapper > * {
         width: 100%;
-        padding: 10px;
+        padding: 0;
         border-radius: 12px;
     }
 
@@ -271,6 +272,10 @@ body.odd-week-active .odd-week {
     .friday {
         width: 100%;
         background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Lesson cards */
@@ -338,12 +343,12 @@ body.odd-week-active .odd-week {
 @media (max-width: 380px) {
 
     .wrapper {
-        padding: 7px;
+        padding: 0;
         gap: 10px;
     }
 
     .wrapper > * {
-        padding: 8px;
+        padding: 0;
     }
 
     .title {
